@@ -1,0 +1,809 @@
+*
+    box-sizing: border-box
+    outline: none
+
+a
+    text-decoration: none
+    color: inherit
+
+.hidden
+    visibility: hidden
+
+a, button
+    cursor: pointer
+
+input, button
+    border: none
+    padding: 0
+    background: none
+
+p, ul, h1, h2, h3, h4, h5, h6, ol
+    padding: 0
+    margin: 0
+    font-weight: normal
+
+ul, ol
+    list-style: none
+
+button, input
+    display: inline-block
+
+body
+    font-family: 'PT Serif'
+    background-color: #fff
+    margin: 0
+    font-size: 24px
+    line-height: 1.3
+
+.container
+    width: 100%
+    max-width: 1400px
+    margin: 0 auto
+    padding: 0 5px
+
+.row
+    padding: 0
+    margin: 0
+.intro
+    max-height: 100vh
+    overflow: hidden
+    position: relative
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 2
+        background-color: rgba(0, 0, 0, 0.8)
+    &__content
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 3
+.video
+    position: relative
+    padding-bottom: 56.25%
+    z-index: 1
+    &__media
+        width: 100%
+        height: auto
+        position: absolute
+        top: 0
+        left: 0
+
+.header
+    font-size: 45px
+    color: #ffffff
+    &__title
+        margin-top: 60px
+        text-align: center
+        text-transform: uppercase
+        margin-bottom: 60px
+        font-weight: normal
+    &-left
+        height: 550px
+        margin-bottom: 100px
+        display: flex
+        justify-content: center
+        align-items: center
+        &__img
+            width: 490px
+            height: 550px
+    &-right
+        padding: 40px 30px
+        margin-bottom: 100px
+        &-list
+            &-element
+                font-size: 45px
+    &__btn
+        padding: 20px 100px
+        font-weight: 700
+        font-size: 30px
+        display: block
+        margin-left: auto
+        margin-right: auto
+        color: #ffffff
+        border-radius: 9999px
+        background-color: #000000
+        transition: background-color 0.2s, color 0.2s, box-shadow 0.2s
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .9)
+        &:hover
+            background-color: #ffffff
+            color: #000000
+            box-shadow: none
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s
+.product
+    padding: 100px 0
+    background-color: #5c51f7
+    &-left
+        display: flex
+        flex-direction: column
+        &-content
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin-bottom: 40px
+            &-card
+                margin-bottom: 15px
+                position: relative
+                &:after
+                    display: block
+                    width: 150px
+                    content: ""
+                    position: absolute
+                    top: 50%
+                    left: 300px
+                    border-bottom: 4px solid #000000
+                    transform: rotate(45deg)
+                &__img
+                    object-fit: cover
+                    height: 200px
+                    width: 300px
+            &-cont
+                &__title
+                    font-size: 24px
+                    text-align: center
+    &-mid
+        display: flex
+        flex-direction: column
+        height: 100%
+        justify-content: center
+        align-items: center
+        &-card
+            &__img
+                height: 300px
+                width: 300px
+                border-radius: 50%
+                object-fit: cover
+    &-right
+        display: flex
+        flex-direction: column
+        &-content
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin-bottom: 40px
+            &-card
+                margin-bottom: 15px
+                position: relative
+                &:after
+                    display: block
+                    width: 150px
+                    content: ""
+                    position: absolute
+                    top: 50%
+                    right: 300px
+                    border-bottom: 4px solid #000000
+                    transform: rotate(-45deg)
+                &__img
+                    object-fit: cover
+                    height: 200px
+                    width: 300px
+            &-cont
+                &__title
+                    font-size: 24px
+                    text-align: center
+    &-btn
+        margin-top: 60px
+.product-left-content:nth-child(2) .product-left-content-card:after
+    transform: rotate(0deg)
+    width: 100px
+    left: 325px
+.product-left-content:nth-child(3) .product-left-content-card:after
+    transform: rotate(-45deg)
+.product-right-content:nth-child(2) .product-right-content-card:after
+    transform: rotate(0deg)
+    width: 100px
+    right: 325px
+.product-right-content:nth-child(3) .product-right-content-card:after
+    transform: rotate(45deg)
+.product-left-content:last-child
+    margin-bottom: 0
+.product-right-content:last-child
+    margin-bottom: 0
+.reviews
+    padding: 60px 0
+    background-color: #51f76d
+    &-content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &-top
+            margin-bottom: 30px
+            width: 500px
+            height: 420px
+            &__img
+                height: 420px
+                width: 500px
+                object-fit: cover
+        &-mid
+            margin-bottom: 30px
+            &__title
+                font-size: 30px
+                font-weight: bold
+        &-bottom
+            margin-bottom: 20px
+            &__desc
+                font-size: 30px
+.promo
+    padding: 60px 0
+    background-color: #f4f751
+    &-left
+        display: flex
+        justify-content: center
+        align-items: center
+        &__img
+            height: 450px
+            width: 400px
+    &-right
+        &__desc
+            font-size: 30px
+    &-bottom
+        margin-top: 30px
+        margin-bottom: 80px
+        margin-left: 50px
+        &-list
+            display: flex
+            flex-direction: column
+            flex-wrap: nowrap
+            &-element
+                font-size: 24px
+                margin-bottom: 15px
+.order
+    padding: 60px 0
+    background-color: #f75191
+    &__title
+        font-size: 66px
+        text-align: center
+        margin-bottom: 30px
+    &-timer
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 60px
+        &-clock
+            font-size: 96px
+    &-left
+        &-card
+            &__img
+                width: 550px
+                height: 540px
+        &-price
+            display: flex
+            justify-content: center
+            align-items: center
+            &--old
+                font-size: 20px
+                color: #fd0404
+                text-decoration: line-through
+            &--new
+                margin-left: 30px
+                font-size: 40px
+                color: #fffff
+                &:hover
+                    transform: scale(1.2)
+    &-right
+        padding: 11px
+        background: #000000
+        border-radius: 10px
+        height: 100%
+        &-offer
+            border: 1px solid rgba(255,255,255,.15)
+            border-radius: 10px
+            padding: 20px
+            height: 100%
+            &__title
+                color: #ffffff
+                margin-bottom: 100px
+                font-size: 40px
+                text-align: center
+            &-content
+                color: #ffffff
+                width: 100%
+                margin-bottom: 50px
+                border-bottom: 1px solid #ffffff
+                padding-bottom: 13px
+                padding-left: 40px
+                text-transform: uppercase
+                &__input
+                    color: #ffffff
+                    width: 100%
+                    &:hover
+                        background-color: #f75191
+            &__btn
+                display: block
+                margin-left: auto
+                margin-right: auto
+                margin-top: 100px
+                border: 1px solid #ffffff
+                border-radius: 9999px
+                padding: 20px 40px
+                color: #000000
+                font-size: 30px
+                font-weight: 700
+                background: #ffffff
+                margin-bottom: 30px
+                box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.8)
+                transition: box-shadow 0.2s, text-decoration 0.2s
+                &:hover
+                    text-decoration: underline
+                    box-shadow: none
+                    transition: box-shadow 0.2s, text-decoration 0.2s
+                &:active
+                    text-decoration: none
+                    transition: text-decoration 0.2s
+
+.owl-theme .owl-nav [class*=owl-]:hover
+    background: none
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+    background: #000000
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev
+    color: #000000
+.owl-carousel .owl-nav button.owl-prev
+    position: absolute
+    left: 300px
+    top: 180px
+.owl-carousel .owl-nav button.owl-next
+    position: absolute
+    right: 300px
+    top: 180px
+.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span
+    font-size: 60px
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+.tooltip
+    position: relative
+    display: inline-block
+    text-transform: none
+    width: 100%
+.tooltip .tooltip__desc
+    visibility: hidden
+    background-color: #ffffff
+    color: #000000
+    text-align: center
+    padding: 5px
+    font-size: 24px
+    position: absolute
+    right: -180px
+    top: -50px
+.tooltip:focus-within .tooltip__desc
+    visibility: visible
+
+@media(max-width: 1400px)
+    .intro
+        max-height: 1100px
+    .video
+        padding-bottom: 59.25%
+    .header
+        &__title
+            margin-top: 35px
+            font-size: 40px
+        &-left
+            height: 400px
+            width: 100%
+            margin-bottom: 60px
+            &__img
+                height: 400px
+                width: 380px
+        &-right
+            padding: 20px 15px
+            margin-bottom: 0
+            &-list
+                &-element
+                    font-size: 35px
+    .product
+        padding: 60px 0
+        &-left
+            &-content
+                margin-bottom: 30px
+                &-card
+                    &__img
+                        width: 250px
+                        height: 150px
+                    &:after
+                        width: 140px
+                        top: 80%
+                        left: 267px
+        &-mid
+            &-card
+                &__img
+                    height: 250px
+                    width: 250px
+        &-right
+            &-content
+                margin-bottom: 30px
+                &-card
+                    &__img
+                        width: 250px
+                        height: 150px
+                    &:after
+                        width: 140px
+                        top: 80%
+                        right: 267px
+    .product-left-content:nth-child(2) .product-left-content-card:after
+        transform: rotate(0deg)
+        width: 90px
+        top: 50%
+        left: 280px
+    .product-left-content:nth-child(3) .product-left-content-card:after
+        transform: rotate(-45deg)
+        top: 20%
+        left: 267px
+    .product-right-content:nth-child(2) .product-right-content-card:after
+        transform: rotate(0deg)
+        width: 90px
+        top: 50%
+        right: 280px
+    .product-right-content:nth-child(3) .product-right-content-card:after
+        transform: rotate(45deg)
+        top: 20%
+        right: 267px
+
+    .reviews
+        &-content
+            &-top
+                width: 400px
+                height: 350px
+                &__img
+                    width: 400px
+                    height: 350px
+    .promo
+        &-bottom
+            padding: 0 15px
+            margin-bottom: 50px
+            &-list
+                &-element
+                    font-size: 30px
+    .order
+        &__title
+            margin-bottom: 20px
+        &-timer
+            margin-bottom: 40px
+            &-clock
+                font-size: 85px
+        &-left
+            &-card
+                display: flex
+                justify-content: center
+                align-items: center
+                &__img
+                    width: 450px
+                    height: 450px
+        &-right
+            &-offer
+                &__title
+                    font-size: 35px
+                    margin-bottom: 40px
+                &-content
+                    margin-bottom: 35px
+                &__btn
+                    margin-top: 75px
+                    font-size: 28px
+    .tooltip .tooltip__desc
+        font-size: 16px
+        right: -50px
+        top: -30px
+@media(max-width: 1200px)
+    .video
+        padding-bottom: 56.25%
+        &__media
+            height: 100%
+    .header
+        &__title
+            margin-top: 20px
+            margin-bottom: 30px
+        &-left
+            height: 350px
+            width: 100%
+            &__img
+                height: 350px
+                width: 330px
+        &-right
+            &-list
+                &-element
+                    font-size: 30px
+    .product
+        padding: 40px 0
+    .product-left-content:nth-child(2) .product-left-content-card:after
+        transform: rotate(0deg)
+        width: 50px
+        top: 50%
+        left: 270px
+    .product-left-content:nth-child(3) .product-left-content-card:after
+        transform: rotate(-45deg)
+        top: 30%
+        left: 260px
+    .product-right-content:nth-child(2) .product-right-content-card:after
+        transform: rotate(0deg)
+        width: 50px
+        top: 50%
+        right: 270px
+    .product-right-content:nth-child(3) .product-right-content-card:after
+        transform: rotate(45deg)
+        top: 30%
+        right: 260px
+    .reviews
+        padding: 40px 0
+        &-content
+            &-top
+                width: 350px
+                height: 300px
+                &__img
+                    width: 350px
+                    height: 300px
+    .owl-carousel .owl-nav button.owl-prev
+        position: absolute
+        left: 250px
+        top: 150px
+    .owl-carousel .owl-nav button.owl-next
+        position: absolute
+        right: 250px
+        top: 150px
+    .promo
+        padding: 40px 0
+        &-right
+            &__desc
+                font-size: 28px
+        &-bottom
+            margin-bottom: 25px
+            &-list
+                &-element
+                    font-size: 23px
+    .order
+        padding: 40px 0
+    .tooltip .tooltip__desc
+        font-size: 16px
+        right: 0px
+        top: -30px
+
+@media(max-width: 991px)
+    .intro__content
+        height: auto
+    .video
+        padding-bottom: 60.25%
+    .header
+        &-left
+            height: 250px
+            width: 100%
+            margin-bottom: 30px
+            &__img
+                height: 250px
+                width: 230px
+        &-right
+            &-list
+                &-element
+                    font-size: 26px
+        &__btn
+            font-size: 24px
+            padding: 15px 60px
+    .product
+        &-left
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            &-content
+                margin-right: 50px
+                margin-bottom: 50px
+                &:nth-child(3)
+                    margin-bottom: 50px
+                    margin-right: 0
+                &-card
+                    &:after
+                        bottom: -105px
+                        left: 88%
+                        width: 100px
+                    &__img
+                        width: 200px
+                        height: 120px
+        &-mid
+            &-card
+                &__img
+                    height: 220px
+                    width: 220px
+        &-right
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            &-content
+                margin-right: 50px
+                margin-top: 50px
+                margin-bottom: 0
+                &:nth-child(3)
+                    margin-top: 50px
+                    margin-right: 0
+                &-card
+                    &:after
+                        top: -70px
+                        left: 68%
+                        width: 100px
+                    &__img
+                        width: 200px
+                        height: 120px
+        &-btn
+            margin-top: 40px
+    .product-left-content:nth-child(2) .product-left-content-card:after
+        transform: rotate(90deg)
+        left: 120px
+        top: 124%
+        width: 30px
+    .product-left-content:nth-child(3) .product-left-content-card:after
+        transform: rotate(-45deg)
+        bottom: -120px
+        left: -60%
+    .product-right-content:nth-child(2) .product-right-content-card:after
+        transform: rotate(-90deg)
+        width: 30px
+        left: 90px
+        top: -24%
+    .product-right-content:nth-child(3) .product-right-content-card:after
+        transform: rotate(45deg)
+        top: -70px
+        left: -22%
+    .reviews
+        &-content
+            &-mid
+                margin-bottom: 20px
+    .owl-carousel .owl-nav button.owl-prev
+        position: absolute
+        left: 170px
+        top: 125px
+    .owl-carousel .owl-nav button.owl-next
+        position: absolute
+        right: 170px
+        top: 125px
+    .promo
+        &-left
+            height: 250px
+            &__img
+                height: 250px
+                width: 230px
+        &-right
+            &__desc
+                font-size: 22px
+        &-bottom
+            &-list
+                &-element
+                    font-size: 17px
+    .order
+        &-left
+            &-card
+                &__img
+                    width: 300px
+                    height: 300px
+            &-price
+                margin-top: 40px
+        &-right
+            &-offer
+                &__title
+                    font-size: 30px
+                    margin-bottom: 25px
+                &-content
+                    margin-bottom: 25px
+                &__btn
+                    margin-top: 30px
+                    padding: 15px 11px
+                    font-size: 24px
+                    margin-bottom: 0
+@media(max-width: 768px)
+    .video
+        padding-bottom: 550px
+        &__media
+            top: 0
+            left: 0
+            width: 100%
+            height: auto
+    .header
+        &__title
+            margin-top: 15px
+            margin-bottom: 15px
+            font-size: 25px
+        &-left
+            &__img
+        &-right
+            padding: 0
+            margin-left: 30px
+            margin-bottom: 30px
+            &-list
+                &-element
+                    font-size: 22px
+    .product
+        padding: 30px 0
+        &-left
+            &-content
+                margin-right: 20px
+                margin-bottom: 30px
+                &:nth-child(3)
+                    margin-bottom: 30px
+                &-cont
+                    &__title
+                        font-size: 20px
+                &-card
+                    margin-bottom: 5px
+                    &:after
+                        bottom: -88px
+                        left: 84%
+                        width: 85px
+                    &__img
+                        width: 170px
+                        height: 100px
+        &-mid
+            &-card
+                &__img
+                    height: 180px
+                    width: 180px
+        &-right
+            &-content
+                margin-right: 20px
+                margin-top: 30px
+                &:nth-child(3)
+                    margin-top: 30px
+                &-cont
+                    &__title
+                        font-size: 20px
+                &-card
+                    margin-bottom: 5px
+                    &:after
+                        top: -52px
+                        left: 62%
+                        width: 85px
+                    &__img
+                        width: 170px
+                        height: 100px
+    .product-left-content:nth-child(2) .product-left-content-card:after
+        transform: rotate(90deg)
+        left: 120px
+        top: 100%
+        width: 20px
+    .product-left-content:nth-child(3) .product-left-content-card:after
+        transform: rotate(-45deg)
+        bottom: -94px
+        left: -49%
+    .product-right-content:nth-child(2) .product-right-content-card:after
+        transform: rotate(-90deg)
+        width: 20px
+        left: 80px
+        top: -20%
+    .product-right-content:nth-child(3) .product-right-content-card:after
+        transform: rotate(45deg)
+        top: -48px
+        left: -16%
+    .reviews
+        padding: 30px 0
+    .owl-carousel .owl-nav button.owl-prev
+        position: absolute
+        left: 70px
+        top: 120px
+    .owl-carousel .owl-nav button.owl-next
+        position: absolute
+        right: 70px
+        top: 120px
+    .promo
+        padding: 30px 0
+        &-right
+            margin-top: 15px
+            &__desc
+                font-size: 20px
+    .order
+        padding: 30px 0
+        &__title
+            margin-bottom: 10px
+            font-size: 30px
+        &-timer
+            margin-bottom: 15px
+            &-clock
+                font-size: 60px
+        &-left
+            margin-bottom: 20px
+            &-price
+                margin-top: 0
+        
